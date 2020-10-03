@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed:600,700&display=swap');
+
+*{
+  box-sizing: border-box;
+}
+
+body{
+    background:radial-gradient(
+    circle at 50% 10%,
+    hsl(214,47%,23%),
+    hsl(237,49%,15%)
+    );
+    min-height: 100vh;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    color: #fff;
+}
+.container{
+    width:650px;
+    max-width: 100%;
+    margin:0 auto;
+   
+}
+header{
+    border: 3px solid hsl(217, 16%, 45%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 20px;
+    padding: 18px;
+    margin-top: 65px;
+    margin-bottom: 65px;
+}
+h1{
+    display: flex;
+    flex-direction: column;
+    margin:0;
+    font-size:2.2rem;
+    line-height: 0.9;
+    font-weight: bold;
+    
+   
+}
+.score-box{
+    background-color: #fff;
+    padding:5px 40px;
+    border-radius: 8px;
+}
+h4{
+    color:hsl(229, 64%, 46%);
+    margin: 0;
+    letter-spacing: 2px;
+}
+.score-box p{
+    color: hsl(229, 25%, 31%);
+    font-size: 3.4rem;
+    font-weight: 700;
+    margin: 0;
+    text-align: center;
+}
+.btn-rules{
+    color: #fff;
+    border: 2px solid hsl(217, 16%, 45%);
+    border-radius: 7px;
+    padding:8px 35px;
+    background-color: transparent;
+    letter-spacing: 2px;
+    font-family: inherit;
+    bottom:30px;
+    right:10%;
+    font-size:15px ;
+    position:fixed;
+}
+.symbol{
+    width:150px;
+    height:150px;
+    border-radius: 50%;
+    border: none;
+    margin:0 25px;
+    cursor: pointer;
+   
+}
+button:focus{ 
+    outline: none;
+    
+
+}
+.symbol:active{
+    transform: scale(0.9);
+
+}
+
+.btn-paper{
+    background: linear-gradient( hsl(230, 89%, 62%), hsl(230, 89%, 65%));
+    
+    
+}
+.btn-scissors{
+    background: linear-gradient( hsl(39, 89%, 49%) , hsl(40, 84%, 53%));
+    
+   
+
+}
+.btn-rock{
+    background: linear-gradient( hsl(349, 71%, 52%), hsl(349, 70%, 56%));
+   
+    
+}
+
+.outer{
+    background-color: #fff;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    height: 115px;
+    width: 115px;
+    box-shadow:inset 0 7px rgb(226, 221, 221);
+}
+main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+    width:400px;
+    height: 350px;
+    margin: 0 auto;
+    position: relative;
+    
+}
+.triangle{
+    position: absolute;
+    height: 70%;
+    width: 70%;
+    z-index: -1;
+    top: 20%;
+    left: 15%;
+
+   
+}
+.btn{
+    background-color: #fff;
+    border-radius: 10px;
+    border: 2px solid #fff;
+    color: hsl(229, 25%, 31%);
+    text-transform: uppercase;
+    font-family: inherit;
+    font-size: 15px;
+    padding:10px 25px ;
+    letter-spacing: 2px;
+
+}
+.selection{
+    display: none;
+    flex-wrap: wrap;
+    justify-content:center;
+    align-items: center;
+    text-align: center;
+    width:1000px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+.selection .symbol{
+    margin: 50px 100px;
+    transform: scale(1.4);
+}
+
+.text{
+    text-transform: uppercase;
+    margin:0 0 20px;
+    font-size:2.5rem;
+    line-height: 0.8;
+    font-weight: bold;
+}
+h2{
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size:20px ;
+    font-weight: bold;
+}
+.rules-modal {
+    background-color: #f0f0f0;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+}
+.rules-modal button{
+    border: none;
+    background-color: transparent;
+    margin-top: 70px;
+    transform: scale(1.5);
+}
+@media (max-width:800px) {
+    .selection .symbol{
+        margin: 50px 20px;
+        transform: scale(1);
+    }
+    .selection{
+        width: 500px;
+    }
+    .go-down{
+        order: 1;
+    }
+}
+@media (max-width:880px) {
+    .selection .symbol{
+        margin: 50px 20px;
+        transform: scale(1);
+    }
+    .selection{
+        width: 500px;
+    }
+    .go-down{
+        order: 1;
+    }
+}
+@media (max-width:390px) {
+    .selection .symbol{
+        margin: 10px 0px;
+        transform: scale(1);
+    }
+    .selection{
+        width: 300px;
+    }
+    header{
+        width: 360px;
+    }
+    main{
+        max-width: 450px;
+       
+    }
+    .go-down{
+        order: 1;
+    }
+    header h1{
+        font-size: 24px;
+
+    }
+    .btn-rules{
+        bottom: 35px;
+        right: 8%;
+    }
+    
+}
